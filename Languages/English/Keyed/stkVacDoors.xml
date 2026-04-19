@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+    <StkVacDoorsLabel>Free Integrated VacBarrier Doors after the "Orbital Tech" Research</StkVacDoorsLabel>
+    <StkVacDoorsDesc>If enabled, after researching the orbital tech, powered doors will act as VacBarriers.</StkVacDoorsDesc>
+
+    <StkFueledVacDoorsLabel>(Needs Restart) Enable Vacuum Proofing upgrade to any powered airtight door.</StkFueledVacDoorsLabel>
+    <StkFueledVacDoorsDesc>When enabled you can upgrade doors with Gravlite panels to create Integrated VacBarrier.
+Make sure to use airtight materials for the doors!</StkFueledVacDoorsDesc>
+
+    <StkVisualiseVacDoorsLabel>(Beta) Enable graphics for any active VacDoor.</StkVisualiseVacDoorsLabel>
+    <StkVisualiseVacDoorsDesc>When enabled your doors will glow, when they activily protecting you from vacuum and temperature change.
+if you're having problems with FPS or TPS, please disable it to completely remove any calculations.</StkVisualiseVacDoorsDesc>
+</LanguageData>

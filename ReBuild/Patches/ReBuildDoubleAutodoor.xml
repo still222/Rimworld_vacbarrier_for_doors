@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PostInheritanceOperation.Patch">
+    <operation Class="StkVacBarrier.PatchOperationInsertWithSetting">
+      <xpath>/Defs/ThingDef[thingClass="ReBuildDoorsAndCorners.Building_MultiTileDoorStuffColor"]/comps/li[compClass="CompPowerTrader"]</xpath>
+      <setting>stkFueledVacDoors</setting>
+      <value>
+        <li Class="CompProperties_Refuelable">
+          <fuelLabel>Gravlite proofing</fuelLabel>
+          <fuelGizmoLabel>Integrated VacBarrier</fuelGizmoLabel>
+          <outOfFuelMessage>No VacBarrier</outOfFuelMessage>
+          <fuelFilter>
+            <thingDefs>
+              <li>GravlitePanel</li>
+            </thingDefs>
+          </fuelFilter>
+          <fuelCapacity>3</fuelCapacity>
+          <autoRefuelPercent>-1</autoRefuelPercent>
+          <minimumFueledThreshold>3</minimumFueledThreshold>
+          <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+          <drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
+          <hideGizmosIfNotPlayerFaction>true</hideGizmosIfNotPlayerFaction>
+        </li>
+      </value>
+    </operation>
+  </Operation>
+
+  <Operation Class="PostInheritanceOperation.Patch">
+    <operation Class="StkVacBarrier.PatchOperationInsertWithSetting">
+      <xpath>/Defs/ThingDef[thingClass="ReBuildDoorsAndCorners.Building_MultiTileDoorStuffColor"]/comps/li[compClass="CompPowerTrader"]</xpath>
+      <setting>stkVisualiseVacDoors</setting>
+      <value>
+        <li Class="StkVacBarrier.CompProperties_MoteEmitterVacField">
+          <mote>Stk_Mote_VacBarrier</mote>
+          <useParentRotation>true</useParentRotation>
+          <triggerOnlyWhenClosed>true</triggerOnlyWhenClosed>
+          <maintain>true</maintain>
+        </li>
+      </value>
+    </operation>
+  </Operation>
+</Patch>
