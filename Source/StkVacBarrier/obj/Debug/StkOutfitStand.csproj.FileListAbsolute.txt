@@ -1,7 +1,0 @@
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\stk_outfit_stand_beauty\Assemblies\StkVacBarrier.dll
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\stk_outfit_stand_beauty\Source\StkVacBarrier\obj\Debug\StkVacBarrier.csproj.AssemblyReference.cache
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\stk_outfit_stand_beauty\Source\StkVacBarrier\obj\Debug\StkVacBarrier.GeneratedMSBuildEditorConfig.editorconfig
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\stk_outfit_stand_beauty\Source\StkVacBarrier\obj\Debug\StkVacBarrier.AssemblyInfoInputs.cache
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\stk_outfit_stand_beauty\Source\StkVacBarrier\obj\Debug\StkVacBarrier.AssemblyInfo.cs
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\stk_outfit_stand_beauty\Source\StkVacBarrier\obj\Debug\StkVacBarrier.csproj.CoreCompileInputs.cache
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\stk_outfit_stand_beauty\Source\StkVacBarrier\obj\Debug\StkVacBarrier.dll
