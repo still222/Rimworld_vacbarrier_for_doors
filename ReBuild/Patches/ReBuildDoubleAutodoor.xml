@@ -14,7 +14,7 @@
         <li Class="StkVacBarrier.CompProperties_MoteEmitterVacField">
           <mote>Stk_Mote_VacBarrier</mote>
           <useParentRotation>true</useParentRotation>
-          <activeOnlyWhenClosed>true</activeOnlyWhenClosed>
+          <activeWhenClosed>true</activeWhenClosed>
           <maintain>true</maintain>
         </li>
       </value>

@@ -24,11 +24,6 @@ public class CompVacProofing : CompRefuelable
 
 	}
 
-	public override void Initialize(CompProperties props)
-	{
-		base.Initialize(props);
-	}
-
 	public override void CompTick()
 	{}
 

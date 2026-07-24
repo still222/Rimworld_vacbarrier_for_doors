@@ -3,7 +3,7 @@
     <StkVacDoorsLabel>CHEAT: Free Integrated VacBarrier Doors after the "Orbital Tech" Research</StkVacDoorsLabel>
     <StkVacDoorsDesc>After researching the orbital tech all powered airtight doors will act as VacBarriers.</StkVacDoorsDesc>
 
-    <StkVisualiseVacDoorsLabel>(Beta) Enable graphics for any active VacDoor.</StkVisualiseVacDoorsLabel>
+    <StkVisualiseVacDoorsLabel>Enable graphics for any active VacDoor.</StkVisualiseVacDoorsLabel>
     <StkVisualiseVacDoorsDesc>When enabled your doors will glow, when they activily protecting you from vacuum and temperature change.
-if you're having problems with FPS or TPS, please disable it to completely remove any calculations.</StkVisualiseVacDoorsDesc>
+if you're having problems with FPS or TPS, please disable it to completely remove all calculations.</StkVisualiseVacDoorsDesc>
 </LanguageData>
