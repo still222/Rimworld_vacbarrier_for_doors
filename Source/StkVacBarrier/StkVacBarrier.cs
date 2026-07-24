@@ -1,21 +1,21 @@
 using HarmonyLib;
+using RimWorld;
 using Verse;
 
-namespace StkVacBarrier
+namespace StkVacBarrier;
+
+[StaticConstructorOnStartup]
+public static class Startup
 {
-	[StaticConstructorOnStartup]
-	public static class Startup
+	static Startup()
 	{
-		public static readonly ResearchProjectDef OrbitalTech = 
-			DefDatabase<ResearchProjectDef>.GetNamedSilentFail("OrbitalTech");
-
-		static Startup()
-		{
-			var harmony = new Harmony("stk.vacbarrierenabler");
-			harmony.PatchAll();
-
-			if (OrbitalTech == null)
-				Log.Warning($"[StkVacBarrier] Orbital tech def couldn't be found for some reason");
-		}
+		var harmony = new Harmony("stk.vacbarrierenabler");
+		harmony.PatchAll();
 	}
+}
+
+[DefOf]
+public class OrbitalResearchDefOf
+{
+	public static ResearchProjectDef OrbitalTech;
 }

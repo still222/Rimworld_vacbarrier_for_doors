@@ -5,16 +5,14 @@ namespace StkVacBarrier;
 
 public class VacDoors : ModSettings
 {
-	public static bool stkEnableVacDoors = false;
-	public static bool stkFueledVacDoors = true;
+	public static bool stkCheatVacDoors = false;
 	public static bool stkVisualiseVacDoors = true;
 
 	public override void ExposeData()
 	{
 		base.ExposeData();
 
-		Scribe_Values.Look(ref stkEnableVacDoors, "stkEnableVacDoors", false);
-		Scribe_Values.Look(ref stkFueledVacDoors, "stkFueledVacDoors", true);
+		Scribe_Values.Look(ref stkCheatVacDoors, "stkEnableVacDoors", false);
 		Scribe_Values.Look(ref stkVisualiseVacDoors, "stkVisualiseVacDoors", true);
 	}
 
@@ -40,18 +38,16 @@ public class VacDoorsMod : Mod
 			ref VacDoors.stkVisualiseVacDoors,
 			"StkVisualiseVacDoorsDesc".Translate());
 
-		listing.Gap();
+		if (Prefs.DevMode)
+		{
+			listing.Gap(30f);
 
-		listing.CheckboxLabeled("StkFueledVacDoorsLabel".Translate(),
-			ref VacDoors.stkFueledVacDoors,
-			"StkFueledVacDoorsDesc".Translate());
-
-		listing.Gap(30f);
-
-		listing.CheckboxLabeled("StkVacDoorsLabel".Translate(),
-			ref VacDoors.stkEnableVacDoors,
-			"StkVacDoorsDesc".Translate());
+			listing.CheckboxLabeled("StkVacDoorsLabel".Translate(),
+				ref VacDoors.stkCheatVacDoors,
+				"StkVacDoorsDesc".Translate());
+		}
 
 		listing.End();
 	}
+
 }
