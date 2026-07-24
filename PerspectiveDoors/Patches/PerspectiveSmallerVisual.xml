@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="Stk_Mote_VacBarrier"]/graphicData</xpath>
+    <value>
+      <drawSize>(0.5, 0.5)</drawSize>
+    </value>
+  </Operation>
+</Patch>

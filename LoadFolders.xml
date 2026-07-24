@@ -3,5 +3,6 @@
 	<v1.6>
 		<li>/</li>
 		<li IfModActive="ReBuild.COTR.DoorsAndCorners">ReBuild</li>
+		<li IfModActive="Owlchemist.PerspectiveDoors">PerspectiveDoors</li>
 	</v1.6>
 </loadFolders>
