@@ -65,6 +65,7 @@ public class CompVacProofing : CompRefuelable
 		if (IsFull)
 			yield break;
 
+		// TODO: Sound from clicking
 		Command_Action command_Action;
 		if (requestedRefuel)
 		{
