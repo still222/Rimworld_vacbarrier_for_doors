@@ -6,4 +6,10 @@
     <StkVisualiseVacDoorsLabel>Enable graphics for any active VacDoor.</StkVisualiseVacDoorsLabel>
     <StkVisualiseVacDoorsDesc>When enabled your doors will glow, when they activily protecting you from vacuum and temperature change.
 if you're having problems with FPS or TPS, please disable it to completely remove all calculations.</StkVisualiseVacDoorsDesc>
+
+    <StkRequestGravliteButton>Install vacbarrier</StkRequestGravliteButton>
+    <StkRequestGravliteButtonDesc>Designate this door to be vacproofed with Gravlite panels, allowing it to act as a VacBarrier preserving pressure and temperature.</StkRequestGravliteButtonDesc>
+
+    <StkCancelRequestGravliteButton>Cancel vacproofing</StkCancelRequestGravliteButton>
+    <StkCancelRequestGravliteButtonDesc>Cancel vacproofing operation.</StkCancelRequestGravliteButtonDesc>
 </LanguageData>

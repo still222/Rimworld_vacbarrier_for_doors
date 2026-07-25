@@ -1,6 +1,7 @@
 using HarmonyLib;
 using RimWorld;
-
+using Verse;
+using Verse.AI;
 namespace StkVacBarrier;
 
 [HarmonyPatch(typeof(Building_Door), nameof(Building_Door.ExchangeVacuum), MethodType.Getter)]
@@ -30,7 +31,6 @@ public static class Patch_IntegratedVacBarrierDoors
 
 }
 
-
 [HarmonyPatch(typeof(Building_Door), nameof(Building_Door.TempEqualizeRate), MethodType.Getter)]
 public static class Patch_TempEqualizeRate
 {
@@ -58,3 +58,35 @@ public static class Patch_TempEqualizeRate
 
 }
 
+[HarmonyPatch(typeof(RefuelWorkGiverUtility), nameof(RefuelWorkGiverUtility.CanRefuel))]
+public static class Patch_RefuelWorkGiverUtility
+{
+	// For refuel button to work as upgrade request
+	[HarmonyPostfix]
+	public static void Postfix(ref bool __result, Pawn pawn, Thing t, bool forced)
+	{
+		if (__result == true || t is not Building_Door)
+			return;
+
+		CompVacProofing compVacProofing = t.TryGetComp<CompVacProofing>();
+		if (compVacProofing == null || !compVacProofing.requestedRefuel || compVacProofing.IsFull)
+			return;
+
+		// Vanilla logic, starting after "if (!forced && !compRefuelable.ShouldAutoRefuelNow)" check
+		if (!pawn.CanReserve(t, 1, -1, null, forced))
+			return;
+
+		if (t.Faction != pawn.Faction)
+			return;
+
+		if (RefuelWorkGiverUtility.FindBestFuel(pawn, t) == null)
+		{
+			ThingFilter fuelFilter = compVacProofing.Props.fuelFilter;
+			JobFailReason.Is("NoFuelToRefuel".Translate(fuelFilter.Summary));
+			return;
+		}
+
+		__result = true;
+	}
+
+}

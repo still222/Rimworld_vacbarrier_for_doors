@@ -1,4 +1,5 @@
 using HarmonyLib;
+using Multiplayer.API;
 using RimWorld;
 using Verse;
 
@@ -11,6 +12,9 @@ public static class Startup
 	{
 		var harmony = new Harmony("stk.vacbarrierenabler");
 		harmony.PatchAll();
+
+		if (MP.enabled)
+			MP.RegisterAll();
 	}
 }
 
